@@ -83,36 +83,36 @@ def arm_wrestle(plyr1, plyr2):
     return f'{repr(match[0][0]) if match[0][1] >= match[1][1] else repr(match[1][0])} wins!'
 
 
-gener1 = generic("Genery the helpful generic object")
-print(gener1.id)
-print(gener1)
-print(repr(gener1))
+# gener1 = generic("Genery the helpful generic object")
+# print(gener1.id)
+# print(gener1)
+# print(repr(gener1))
 
-player1 = Player("Muhammad Ali", 20)
+# player1 = Player("Muhammad Ali", 20)
 
-player1
-print(player1.strength)
-print(player1.arm_wrestle)
-print(player1.name)
+# player1
+# print(player1.strength)
+# print(player1.arm_wrestle)
+# print(player1.name)
 
-room1 = room()
-print(room1.name)
+# room1 = room()
+# print(room1.name)
 
-player2 = Player("Jimmy Buckets", 14)
-print(player2.arm_wrestle)
+# player2 = Player("Jimmy Buckets", 14)
+# print(player2.arm_wrestle)
 
 
-print(repr(player1))
-print(player2.id)
+# print(repr(player1))
+# print(player2.id)
 
-room2 = room()
-print(repr(room2))
-room2.name = "Ball Room"
-print(repr(room2))
+# room2 = room()
+# print(repr(room2))
+# room2.name = "Ball Room"
+# print(repr(room2))
 
-player3 = Player("Tandem Bicycleman", 47)
+# player3 = Player("Tandem Bicycleman", 47)
 
-print(player3)
-print(repr(player3))
+# print(player3)
+# print(repr(player3))
 
-print(arm_wrestle(player2, player1))
+# print(arm_wrestle(player2, player1))
