@@ -1,3 +1,5 @@
+import time
+
 ################## List of Properties ################## 
 '''
 Global Object Properties:
@@ -17,7 +19,10 @@ Player Object Properties:
 ################## Generic Object ################## 
 
 class generic:
-    kids = 0   
+    # kids should be a dictionary that contains all of the important 
+    # info about each child object -- change to obj_info
+    kids = 0
+    obj_info = {}
     def __init__(self, name=None):
         __class__.kids += 1
         self.num = __class__.kids
@@ -25,6 +30,8 @@ class generic:
             self._name = f'Generic {self.__class__.__name__}'
         else:
             self._name = name
+        obj_info[self.id] = {"name": self._name}
+        
 
     def __str__(self):
         return self.name
@@ -54,10 +61,12 @@ class room(generic):
 
     @property
     def description(self):
+        self.obj_info[self.id]['description'] = self.desc
         return self.desc
 
     @property
     def exits(self):
+        self.obj_info[self.id]['exits'] = self.exits
         return self._exits
 
 ################## Player Object ################## 
@@ -82,11 +91,21 @@ def arm_wrestle(plyr1, plyr2):
     # need to break this out to be more complex -->> Need a draw scenario
     return f'{repr(match[0][0]) if match[0][1] >= match[1][1] else repr(match[1][0])} wins!'
 
+def main():
+    print(f'Initializing...')
+    time.sleep(2)
+    print("||| Connected |||")
+    user = input("Username>> ")
+    
 
-# gener1 = generic("Genery the helpful generic object")
-# print(gener1.id)
-# print(gener1)
-# print(repr(gener1))
+#main()
+
+    
+
+gener1 = generic("Genery the helpful generic object")
+print(gener1.id)
+print(gener1)
+print(repr(gener1))
 
 # player1 = Player("Muhammad Ali", 20)
 
