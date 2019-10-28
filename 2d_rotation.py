@@ -8,12 +8,12 @@ N = 4
 def rotateMatrix(mat, dir="left"): 
       
     # Consider all squares one by one 
-    print(f'max range for x: int({N} divided by 2) minus 1 = {int(N/2)-1}')
+    print(f'x in range(0, int({N}/2) <<<{int(N/2)}>>>)')
     for x in range(0, int(N/2)): 
         print(f'x: {x}')     
         # Consider elements in group    
         # of 4 in current square 
-        print(f'max range for y: ({N} minus {x} minus 1) minus one = {(N-x-1)-1}')
+        print(f'y in range({x}, {N}-{x}-1 <<<{N-x-1}>>>)')
         for y in range(x, N-x-1):
             print(f'y: {y}')  
             # store current cell in temp variable  
