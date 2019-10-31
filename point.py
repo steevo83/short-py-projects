@@ -8,10 +8,7 @@ class Point():
         yield self.z
 
     def __eq__(self, other):
-        if self.x == other.x and self.y == other.y and self.z == other.z:
-            return True
-        else:
-            return False
+        return (self.x, self.y, self.z) == (other.x, other.y, other.z)
 
     def __add__(self, other):
         _x, _y, _z = self.x + other.x, self.y + other.y, self.z + other.z
@@ -34,8 +31,8 @@ class Point():
         return f'Point(x={self.x}, y={self.y}, z={self.z})'
 
 p1 = Point(1, 2, 3)
-p2 = Point(1, 2, 4)
-p3 = Point(1, 2, 3)
+p2 = Point(1, 2, 3)
+p3 = Point(2, 4, 6)
 # p1.x
 print(p1)
 print(p2)
