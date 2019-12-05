@@ -1,0 +1,12 @@
+.topper {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: azure;
+    color: darkgrey;
+}
+
+.descrip {
+    padding: 1.5rem;
+    background-color: lightgray;
+    color: black;
+}
