@@ -11,7 +11,7 @@ def get_earliest(*dates):
     # print(split_list[0][2])
     # print(max(split_list))
 
-get_earliest("01/08/2019", "01/09/2014", "02/02/2002","04/06/1915", "05/63/1900","11/03/1983","01/01/1895","na/na/1895","01/na/1895","te/s/t")
+get_earliest("01/08/2019", "01/09/2014", "02/02/2002","04/06/1915", "05/63/1900","11/03/1983","01/01/1895","na/na/1886","01/na/1895","te/s/t")
 
 
 # I want you to write a function that takes two strings representing dates and returns the string that represents the earliest point in time. The strings are in the US-specific MM/DD/YYYY format... just to make things harder. Note that the month, year, and day will always be represented by 2, 4, and 2 digits respectively.

@@ -30,7 +30,7 @@ class generic:
             self._name = f'Generic {self.__class__.__name__}'
         else:
             self._name = name
-        obj_info[self.id] = {"name": self._name}
+        self.obj_info[self.id] = {"name": self._name}
         
 
     def __str__(self):
@@ -53,8 +53,8 @@ class generic:
 
 ################## Room Object ################## 
 
-class room(generic):
-    def __init__(self, exits=[], desc="A Generic Room"):
+class Room(generic):
+    def __init__(self, name=None, exits=[], desc="A Generic Room"):
         super().__init__()
         self._exits = exits
         self.desc = desc 
@@ -73,7 +73,7 @@ class room(generic):
 
 class Player(generic):
     
-    def __init__(self, name, stren):
+    def __init__(self, name=None, stren=10):
         super().__init__(name)
         self._strength = stren
 
